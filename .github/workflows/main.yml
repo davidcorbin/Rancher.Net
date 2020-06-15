@@ -28,7 +28,7 @@ jobs:
         # Filepath of the project to be packaged, relative to root of repository
         PROJECT_FILE_PATH: Rancher.Net/Rancher.Net.csproj
         # NuGet package id, used for version detection & defaults to project name
-        PACKAGE_NAME: Rancher.Net
+        #PACKAGE_NAME: Rancher.Net
         # Filepath with version info, relative to root of repository & defaults to PROJECT_FILE_PATH
         #VERSION_FILE_PATH: # optional
         # Regex pattern to extract version info in a capturing group
@@ -44,4 +44,4 @@ jobs:
         # NuGet server uri hosting the packages, defaults to https://api.nuget.org
         NUGET_SOURCE: https://api.nuget.org
         # Flag to toggle pushing symbols along with nuget package to the server, disabled by default
-        #INCLUDE_SYMBOLS: # optional
+        INCLUDE_SYMBOLS: false

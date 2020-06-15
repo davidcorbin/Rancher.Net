@@ -6,13 +6,13 @@
         <Title>Rancher.Net</Title>
         <Authors>David Corbin</Authors>
         <Description>Rancher API client</Description>
-        <Version>0.0.1-alpha3</Version>
-        <PackageVersion>0.0.1-alpha3</PackageVersion>
+        <Version>0.0.1-alpha4</Version>
+        <PackageVersion>0.0.1-alpha4</PackageVersion>
         <Copyright>David Corbin</Copyright>
         <PackageProjectUrl>https://github.com/davidcorbin/Rancher.Net</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/davidcorbin/Rancher.Net/blob/master/LICENSE</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/davidcorbin/Rancher.Net</RepositoryUrl>
-        <ReleaseVersion>0.0.1-alpha3</ReleaseVersion>
+        <ReleaseVersion>0.0.1-alpha4</ReleaseVersion>
         <SynchReleaseVersion>false</SynchReleaseVersion>
         <PackOnBuild>true</PackOnBuild>
         <NeutralLanguage>en</NeutralLanguage>

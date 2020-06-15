@@ -64,7 +64,7 @@ namespace Rancher.Net.API.Response.Cluster
         public Allocatable Allocatable { get; set; }
 
         [JsonProperty("annotations")]
-        public Annotations Annotations { get; set; }
+        public Dictionary<string, string> Annotations { get; set; }
 
         [JsonProperty("answers")]
         public Answers Answers { get; set; }
@@ -270,38 +270,6 @@ namespace Rancher.Net.API.Response.Cluster
         [JsonProperty("pods")]
         [JsonConverter(typeof(PurpleParseStringConverter))]
         public long Pods { get; set; }
-    }
-
-    public partial class Annotations
-    {
-        [JsonProperty("authz.management.cattle.io/creator-role-bindings")]
-        public string AuthzManagementCattleIoCreatorRoleBindings { get; set; }
-
-        [JsonProperty("field.cattle.io/overwriteAppAnswers", NullValueHandling = NullValueHandling.Ignore)]
-        public string FieldCattleIoOverwriteAppAnswers { get; set; }
-
-        [JsonProperty("lifecycle.cattle.io/create.cluster-agent-controller-cleanup")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
-        public bool LifecycleCattleIoCreateClusterAgentControllerCleanup { get; set; }
-
-        [JsonProperty("lifecycle.cattle.io/create.cluster-provisioner-controller", NullValueHandling = NullValueHandling.Ignore)]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
-        public bool? LifecycleCattleIoCreateClusterProvisionerController { get; set; }
-
-        [JsonProperty("lifecycle.cattle.io/create.cluster-scoped-gc")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
-        public bool LifecycleCattleIoCreateClusterScopedGc { get; set; }
-
-        [JsonProperty("lifecycle.cattle.io/create.mgmt-cluster-rbac-remove")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
-        public bool LifecycleCattleIoCreateMgmtClusterRbacRemove { get; set; }
-
-        [JsonProperty("provisioner.cattle.io/ke-driver-update", NullValueHandling = NullValueHandling.Ignore)]
-        public string ProvisionerCattleIoKeDriverUpdate { get; set; }
-
-        [JsonProperty("io.cattle.agent.force.deploy", NullValueHandling = NullValueHandling.Ignore)]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
-        public bool? IoCattleAgentForceDeploy { get; set; }
     }
 
     public partial class Answers

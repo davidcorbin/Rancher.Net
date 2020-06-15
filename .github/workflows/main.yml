@@ -26,10 +26,10 @@ jobs:
       with:
         dotnet-version: '3.1.x' # SDK Version to use.
         source-url: https://api.nuget.org/v3/index.json
-      env:
-        NUGET_AUTH_TOKEN: ${{ secrets.NUGET_ORG_PUSH_API_KEY }}
     - run: dotnet build --configuration Release Rancher.Net
     - name: Create the package
       run: dotnet pack --configuration Release Rancher.Net
     - name: Publish the package to Nuget.org
-      run: dotnet nuget push -k ${{ secrets.NUGET_ORG_PUSH_API_KEY }} Rancher.Net/bin/Release/*.nupkg
+      env:
+        NUGET_AUTH_TOKEN: ${{ secrets.NUGET_ORG_PUSH_API_KEY }}
+      run: dotnet nuget push -s https://api.nuget.org/v3/index.json -k $NUGET_AUTH_TOKEN Rancher.Net/bin/Release/*.nupkg

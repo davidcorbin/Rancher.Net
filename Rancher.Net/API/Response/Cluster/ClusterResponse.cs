@@ -1,9 +1,9 @@
+using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+
 namespace Rancher.Net.API.Response.Cluster
 {
-    using System;
-    using System.Collections.Generic;
-    using Newtonsoft.Json;
-
     public partial class ClusterResponse
     {
         [JsonProperty("type")]

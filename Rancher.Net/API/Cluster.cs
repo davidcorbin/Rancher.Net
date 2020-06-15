@@ -25,9 +25,22 @@ namespace Rancher.Net.API
                 response.EnsureSuccessStatusCode();
                 var content = await response.Content.ReadAsStringAsync();
 
-                ClusterResponse a = JsonConvert.DeserializeObject<ClusterResponse>(content);
+                ClusterResponse clusterResponse = JsonConvert.DeserializeObject<ClusterResponse>(content);
 
-                return a;
+                return clusterResponse;
+            }
+        }
+
+        public async Task<GenerateKubeconfigResponse> GenerateKubeconfig(String clusterId)
+        {
+            using (var response = await _httpClient.PostAsync(_rancherApiBaseUrl + "/clusters" + "/" + clusterId + "?" + "action=generateKubeconfig", null))
+            {
+                response.EnsureSuccessStatusCode();
+                var content = await response.Content.ReadAsStringAsync();
+
+                GenerateKubeconfigResponse clusterResponse = JsonConvert.DeserializeObject<GenerateKubeconfigResponse>(content);
+
+                return clusterResponse;
             }
         }
     }

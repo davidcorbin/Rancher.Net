@@ -9,7 +9,7 @@
         <PackageVersion>0.0.1-alpha1</PackageVersion>
         <Copyright>David Corbin</Copyright>
         <PackageProjectUrl>https://github.com/davidcorbin/Rancher.Net</PackageProjectUrl>
-        <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+        <PackageLicenseUrl>https://github.com/davidcorbin/Rancher.Net/blob/master/LICENSE</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/davidcorbin/Rancher.Net</RepositoryUrl>
     </PropertyGroup>
 

@@ -32,4 +32,4 @@ jobs:
     - name: Create the package
       run: dotnet pack --configuration Release Rancher.Net
     - name: Publish the package to Nuget.org
-      run: dotnet nuget push Rancher.Net/bin/Release/*.nupkg
+      run: dotnet nuget push -k ${{ secrets.NUGET_ORG_PUSH_API_KEY }} Rancher.Net/bin/Release/*.nupkg
